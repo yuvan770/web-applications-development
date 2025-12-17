@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clickable Image Example</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        padding: 24px;
+      }
+
+      .card {
+        max-width: 720px;
+        width: 100%;
+        border: 1px solid rgba(127, 127, 127, 0.35);
+        border-radius: 16px;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      .hint {
+        margin: 0 0 12px;
+        opacity: 0.8;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 12px;
+        border: 1px solid rgba(127, 127, 127, 0.35);
+        border-radius: 12px;
+        margin-bottom: 16px;
+      }
+
+      nav a {
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(127, 127, 127, 0.25);
+      }
+
+      nav a:hover {
+        border-color: rgba(127, 127, 127, 0.5);
+      }
+
+      section {
+        scroll-margin-top: 16px;
+        padding-top: 8px;
+      }
+
+      h2 {
+        margin: 16px 0 8px;
+      }
+
+      .external {
+        margin: 12px 0 16px;
+      }
+
+      a.image-link {
+        display: inline-block;
+        border-radius: 12px;
+        overflow: hidden;
+        outline: none;
+      }
+
+      a.image-link:focus-visible {
+        box-shadow: 0 0 0 4px rgba(0, 120, 212, 0.4);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#lists">Lists</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <section id="home">
+        <h2>Home</h2>
+        <p class="hint">Welcome! Use the menu links above to jump to sections on this same page.</p>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>This page demonstrates internal navigation links and an external hyperlink.</p>
+        <p class="external">
+          Visit <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+          for more information.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>You can add your contact details here (email, phone, or a contact form).</p>
+      </section>
+
+      <section id="lists">
+        <h2>Lists</h2>
+
+        <h3>Ordered list: Programming Languages</h3>
+        <ol>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>C++</li>
+          <li>PHP</li>
+        </ol>
+
+        <h3>Unordered list: Hobbies</h3>
+        <ul>
+          <li>Reading</li>
+          <li>Music</li>
+          <li>Gaming</li>
+          <li>Traveling</li>
+          <li>Cooking</li>
+        </ul>
+
+        <h3>Nested list: Daily Schedule</h3>
+        <ul>
+          <li>
+            Morning
+            <ul>
+              <li>Exercise</li>
+              <li>Breakfast</li>
+              <li>Study / Work</li>
+            </ul>
+          </li>
+          <li>
+            Afternoon
+            <ul>
+              <li>Lunch</li>
+              <li>Projects / Classes</li>
+              <li>Short walk</li>
+            </ul>
+          </li>
+          <li>
+            Evening
+            <ul>
+              <li>Family time</li>
+              <li>Dinner</li>
+              <li>Revision / Relax</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!--
+        Put an image named "sample-image.jpg" in the same folder as this file.
+        The width/height attributes reserve space to prevent layout shift.
+      -->
+      <a
+        class="image-link"
+        href="https://www.wikipedia.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Wikipedia (opens in a new tab)"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80"
+          width="800"
+          height="450"
+          alt="Forest trees with sunlight. Click the image to open Wikipedia."
+        />
+      </a>
+    </main>
+  </body>
+</html>
+
+
